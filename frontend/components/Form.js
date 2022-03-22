@@ -4,12 +4,12 @@ export default class Form extends React.Component {
   constructor() {
     super()
     this.state = {
-      todoItem:'',
+      todoItem: '',
     }
   }
 
-  onChange = (e) => {
-    const {name, value} = e.target
+  onChange = e => {
+    const { name, value } = e.target
     this.setState({
       [name]: value,
     })
@@ -19,7 +19,7 @@ export default class Form extends React.Component {
     e.preventDefault()
     this.props.addItem(this.state.todoItem)
     this.setState({
-      todoItem:'',
+      todoItem: '',
     })
   }
 
@@ -28,8 +28,8 @@ export default class Form extends React.Component {
       <div>
         Form
         <form onSubmit={this.onSubmit}>
-          <label htmlFor='todo-input' >Add New Todo: </label>
-          <input 
+          <label htmlFor='todo-input'>Add New Todo: </label>
+          <input
             id='todo-input'
             name='todoItem'
             value={this.state.todoItem}
