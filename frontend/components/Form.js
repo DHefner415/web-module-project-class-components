@@ -23,6 +23,12 @@ export default class Form extends React.Component {
     })
   }
 
+  // onCompleted = e => {
+  //   e.preventDefault()
+  //   this.props.removeItem(this.state.todoItem)
+  //   this.setState()
+  // }
+
   render() {
     return (
       <div>
@@ -36,6 +42,7 @@ export default class Form extends React.Component {
             onChange={this.onChange}
           />
           <button>Add Todo</button>
+          <button>Clear Completed</button>
         </form>
       </div>
     )
