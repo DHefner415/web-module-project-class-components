@@ -32,7 +32,6 @@ export default class Form extends React.Component {
   render() {
     return (
       <div>
-        Form
         <form onSubmit={this.onSubmit}>
           <label htmlFor='todo-input'>Add New Todo: </label>
           <input
